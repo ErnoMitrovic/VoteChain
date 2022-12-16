@@ -9,6 +9,7 @@ use gstd::{exec, msg, prelude::*, ActorId, String};
 
 use crate::{messages::*, io::*, state::*};
 
+
 pub const BASE_PERCENT: u8 = 100;
 
 #[derive(Debug, Default)]
@@ -638,3 +639,4 @@ extern "C" fn meta_state() -> *mut [i32; 2] {
     .encode();
     gstd::util::to_leak_ptr(encoded)
 }
+
