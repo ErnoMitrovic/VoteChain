@@ -611,7 +611,8 @@ async fn main() {
             dao.transactions.insert(dao.transaction_id, Some(action));
             dao.abort(None, proposal_id).await
         }
-        DaoAction::Continue(transaction_id) => dao.continue_transaction(transaction_id).await,
+        DaoAction::Continue(transaction_id) => dao.continue_transaction(transaction_id.try_into().unwrap_or_default())
+        .await,
         DaoAction::UpdateDelegateKey(account) => dao.update_delegate_key(&account),
         DaoAction::SetAdmin(account) => dao.set_admin(&account),
     }

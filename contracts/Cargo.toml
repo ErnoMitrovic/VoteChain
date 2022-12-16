@@ -1,11 +1,5 @@
 [workspace]
 
 members = [
-    "actor",
-    "superActor",
-    "actor/actor_io",
-    "proposal",
-    "proposal/proposal_io",
-    "superActor/superActor_io",
     "dao",
     ]
