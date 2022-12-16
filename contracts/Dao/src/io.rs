@@ -84,6 +84,5 @@ pub struct InitDao {
     pub period_duration: u64,
     pub voting_period_length: u64,
     pub grace_period_length: u64,
-    pub dilution_bound: u8,
     pub abort_window: u64,
 }
