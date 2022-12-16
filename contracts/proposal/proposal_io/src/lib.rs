@@ -19,6 +19,10 @@ pub enum ProposalAction{
         to: ActorId,
         amount: u128,
     },
+    Approve {
+        to: ActorId,
+        amount: u128,
+    },
     TotalSupply(u128),
     Balance(u128),
 }
@@ -36,6 +40,22 @@ pub enum StateReply{
     Name(String),
     Symbol(String),
     Decimals(u8),
+    TotalSupply(u128),
+    Balance(u128),
+}
+
+#[derive(Debug, Encode, Decode, TypeInfo)]
+pub enum ProposalEvent {
+    Transfer {
+        from: ActorId,
+        to: ActorId,
+        amount: u128,
+    },
+    Approve {
+        from: ActorId,
+        to: ActorId,
+        amount: u128,
+    },
     TotalSupply(u128),
     Balance(u128),
 }
