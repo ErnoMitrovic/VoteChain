@@ -126,18 +126,19 @@
 	button { 
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	order: 0;
+	left: 0%;
 	background-color: #b60f6f;
 	box-shadow: 0px 0px 15px #818181;
 	padding: 2% 5%;
 	border-radius: 25px;
 	color: white;
 	cursor: pointer;
+	margin-top: 25px;
+	}
+	button:hover{
+		opacity: 0.6;
+	}
 
-}
-~
 	/**
 	 * Address inconsistent text-transform inheritance for button and select.
 	 * All other form control elements do not inherit text-transform values.
@@ -1203,11 +1204,13 @@
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
 				box-sizing: border-box;
+		
 	}
 
 	.container {
 		padding-right: 15px;
 		padding-left: 15px;
+		text-align: center
 	}
 
 	.row {
