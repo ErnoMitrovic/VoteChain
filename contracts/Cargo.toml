@@ -3,7 +3,7 @@
 members = [
     "actor",
     "superActor",
-    "actor/io",
+    "actor/actor_io",
     "proposal",
-    
+    "proposal/proposal_io",
     ]
