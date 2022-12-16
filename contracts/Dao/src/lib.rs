@@ -19,7 +19,6 @@ struct Dao {
     period_duration: u64,
     voting_period_length: u64,
     grace_period_length: u64,
-    dilution_bound: u8,
     abort_window: u64,
     total_shares: u128,
     balance: u128,
@@ -288,7 +287,7 @@ impl Dao {
         proposal.passed = proposal.yes_votes > proposal.no_votes
             && proposal.yes_votes * 10000 / self.total_shares >= proposal.quorum
             && proposal.max_total_shares_at_yes_vote
-                < (self.dilution_bound as u128) * self.total_shares;
+                < self.total_shares;
         // if membership proposal has passed
         if proposal.passed && proposal.is_membership_proposal {
             let applicant = self.members.entry(proposal.applicant).or_insert(Member {
@@ -547,7 +546,6 @@ extern "C" fn init() {
         period_duration: config.period_duration,
         grace_period_length: config.grace_period_length,
         abort_window: config.abort_window,
-        dilution_bound: config.dilution_bound,
         total_shares: 1,
         ..Dao::default()
     };
