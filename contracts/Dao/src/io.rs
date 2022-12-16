@@ -69,7 +69,7 @@ pub enum DaoEvent{
         amount: u128,
     },
     Abort(u128),
-    AdminUpdated(u128),
+    AdminUpdated(ActorId),
     DelegateKeyUpdated{
         member: ActorId,
         delegate: ActorId,
