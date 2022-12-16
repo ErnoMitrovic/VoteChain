@@ -1,8 +1,20 @@
 [package]
-name = "Dao"
+name = "dao"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+codec = { package = "parity-scale-codec", version = "3.2.1", default-features = false }
+ft-main-io = { git = "https://github.com/gear-dapps/sharded-fungible-token.git", tag = "0.1.2" }
+ft-logic-io = { git = "https://github.com/gear-dapps/sharded-fungible-token.git", tag = "0.1.2" }
+gstd = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
+scale-info = { version = "2.3.0", default-features = false }
+
+[dev-dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", branch = "stable", features = ["debug"] }
+gtest = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }

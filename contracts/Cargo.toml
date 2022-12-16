@@ -7,4 +7,5 @@ members = [
     "proposal",
     "proposal/proposal_io",
     "superActor/superActor_io",
+    "dao",
     ]
