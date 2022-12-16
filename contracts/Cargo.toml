@@ -2,5 +2,8 @@
 
 members = [
     "actor",
-    "superActor
+    "superActor",
+    "actor/io",
+    "proposal",
+    
     ]
