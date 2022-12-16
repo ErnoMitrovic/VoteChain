@@ -1,2 +1,2 @@
 #![no_std]
-use gstd::{msg, ActorId}
+use gstd::{msg, ActorId};
